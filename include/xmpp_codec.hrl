@@ -97,6 +97,9 @@
 		       'no-permanent-store' | 'no-permanent-storage'}).
 -type hint() :: #hint{}.
 
+-record(chint, {type :: 'like' | 'unlike' | 'pin' | 'unpin'}).
+-type chint() :: #chint{}.
+
 -record(jingle_error, {reason :: 'out-of-order' | 'tie-break' |
 				 'unknown-session' | 'unsupported-info' |
 				 'security-required'}).
@@ -1228,6 +1231,7 @@
                         chatstate() |
                         jingle_ft_received() |
                         hint() |
+                        chint() |
                         bookmark_storage() |
                         vcard_geo() |
                         xevent() |

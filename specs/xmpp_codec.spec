@@ -3542,6 +3542,10 @@
 		       'no-permanent-store' | 'no-permanent-storage'}).
 -type hint() :: #hint{}.
 
+-record(chint, {type :: 'like' | 'unlike' | 'pin' | 'unpin'}).
+-type chint() :: #chint{}.
+
+
 -xml(hint_no_copy,
      #elem{name = <<"no-copy">>,
 	   xmlns = <<"urn:xmpp:hints">>,
